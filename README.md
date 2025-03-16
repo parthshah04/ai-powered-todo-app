@@ -1,1 +1,1 @@
-# fullstack-todo-app
+# ai-powered-todo-app
