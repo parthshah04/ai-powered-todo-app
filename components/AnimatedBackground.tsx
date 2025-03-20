@@ -1,5 +1,10 @@
-// components/AnimatedBackground.jsx
-export default function AnimatedBackground({ children }) {
+import { ReactNode } from "react";
+
+type AnimatedBackgroundProps = {
+  children: ReactNode;
+};
+
+export default function AnimatedBackground({ children }: AnimatedBackgroundProps) {
   return (
     <div className="relative min-h-screen bg-[#F9F9F9] overflow-hidden">
       {/* Animated Orange Circles */}

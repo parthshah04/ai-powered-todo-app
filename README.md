@@ -44,6 +44,10 @@ Below are some screenshots showcasing the current implementation:
 ![Main Page Screenshot](./public/main.png)
 *The landing page with a modern design and engaging hero section.*
 
+### Task & Sub-Tasks Page
+![Task & Sub-Tasks Page Screenshot](./public/Subtasks.png)
+*Manage your tasks and sub-tasks with a clean, intuitive interface designed for productivity. Create, update, and track both tasks and their subtasks seamlessly, ensuring you never miss a detail.*
+
 ### Projects Page
 ![Projects Page Screenshot](./public/projects.png)
 *Easily manage and view your projects with a clean interface.*

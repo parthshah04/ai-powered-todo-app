@@ -8,6 +8,11 @@ import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import AddLabelDialog from "@/components/labels/add-label-dialog";
 import { Plus, Tag } from "lucide-react";
 
+interface Label {
+  _id: string;
+  name: string;
+}
+
 export default function FilterLabelsPage() {
   // 1. Fetch labels from Convex
   const labels = useQuery(api.labels.getLabels) || [];
@@ -45,7 +50,7 @@ export default function FilterLabelsPage() {
               <p className="text-sm text-gray-500">No labels found.</p>
             ) : (
               <ul className="space-y-2">
-                {labels.map((label) => (
+                {labels.map((label: Label) => (
                   <li
                     key={label._id}
                     className="border-b last:border-b-0 border-gray-200 py-2"

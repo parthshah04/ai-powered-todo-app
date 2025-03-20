@@ -1,3 +1,5 @@
+// eslint-disable-next-line react-hooks/exhaustive-deps
+
 import { Doc } from "@/convex/_generated/dataModel";
 import {
   DialogContent,
@@ -103,7 +105,7 @@ export default function AddTaskDialog({ data }: { data: Doc<"todos"> }) {
             </div>
           </div>
           <div className="pl-4">
-            {inCompletedSubtodosByProject.map((task) => {
+            {inCompletedSubtodosByProject.map((task: Doc<"subTodos">) => {
               return (
                 <Task
                   key={task._id}
@@ -118,7 +120,7 @@ export default function AddTaskDialog({ data }: { data: Doc<"todos"> }) {
             <div className="pb-4">
               <AddTaskWrapper parentTask={data} />
             </div>
-            {completedSubtodosByProject.map((task) => {
+            {completedSubtodosByProject.map((task: Doc<"subTodos">) => {
               return (
                 <Task
                   key={task._id}

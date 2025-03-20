@@ -4,6 +4,7 @@ import { useQuery } from "convex/react";
 import { Hash } from "lucide-react";
 import Link from "next/link";
 import { Label } from "../ui/label";
+import { Doc } from "@/convex/_generated/dataModel";
 
 export default function ProjectList() {
   const projects = useQuery(api.projects.getProjects);
@@ -13,7 +14,7 @@ export default function ProjectList() {
         <h1 className="text-lg font-semibold md:text-2xl">Projects</h1>
       </div>
       <div className="flex flex-col gap-1 py-4">
-        {projects?.map((project) => {
+        {projects?.map((project: Doc<"projects">) => {
           return (
             <Link key={project._id} href={`/loggedin/projects/${project._id}`}>
               <div className="flex items-center space-x-2 border-b-2 p-2 border-gray-100">
